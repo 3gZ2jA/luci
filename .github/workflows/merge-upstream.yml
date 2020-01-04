@@ -13,7 +13,7 @@ on:
     branches: 
       - master
   schedule:
-    - cron: 20/30 * * * *
+    - cron: 50/30 * * * *
 
 jobs:
   merge:
@@ -45,7 +45,7 @@ jobs:
 
     - name: Load upstream commits
       run : |
-        git remote add offical https://github.com/coolsnowwolf/packages.git
+        git remote add offical https://github.com/coolsnowwolf/luci.git
         git fetch offical
         git pull offical master
 
